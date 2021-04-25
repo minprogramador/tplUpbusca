@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UpBusca - Prospeccao de novos clientes.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="UPBUSCA, PROSPECCAO DE CLIENTES, NOVOS CLIENTES"/>
+    <link href="./css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="./css/bootstrap-theme.css" rel='stylesheet' type='text/css' />
+    <link href="./css/font-awesome.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/icon-font.min.css" type='text/css' />
+    <link href="./css/style.css" rel='stylesheet' type='text/css' />
+	    <link href="./css/jm.spinner.css" rel='stylesheet' type='text/css' />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    </head>
+        <body class="sticky-header left-side-collapsed"  onload="initMap()">
+    	
+    
+	<section>
+					
+	<div class="left-side sticky-left-side">
+			<div class="left-side-inner">
+				<ul class="nav nav-pills nav-stacked custom-nav">
+					<li class="active">
+						<a href="./Painel">
+							<i class="fa fa-home fa-2x" aria-hidden="true"></i>
+							<span>Painel</span>
+						</a>
+					</li>
+					<li class="menu-list">
+						<a href="#" data-toggle="modal" data-target="#Cadastro">
+							<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+							<span>Cadastro</span>
+						</a>
+					</li>
+
+					<li class="menu-list">
+						<a href="#" data-toggle="modal" data-target="#EditrarCadastro">
+							<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+							<span>Editar cadastro</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" data-toggle="modal" data-target="#Contato">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<span>Fale Conoscos</span>
+						</a>
+					</li>
+					<li>
+						<a href="./Sair">
+							<i class="fa fa-sign-in" aria-hidden="true"></i>
+							<span>Sair</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>					<div class="modal fade" id="Cadastro" role="dialog" aria-labelledby="Cadastro">
+	  <div class="modal-dialog" role="document" style="width: 45%; margin-top: 12%;">
+	    <div class="modal-content ">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Dados da conta.</h4>
+	      </div>
+	      <div class="modal-body">
+	    	<div class="row">
+	
+				<div class="form-group col-md-12">
+					<span>Limite/Consumo:</span>
+
+					<table class="table table-striped">
+					  <thead>
+					    <tr>
+						  					      <th>CPF</th>
+					      					      					      <th>CNPJ</th>
+					      					      					      <th>PAI</th>
+					      					       					      <th>RG</th>
+ 					       					      					      <th>CNH</th>
+					      					      					      <th>CREDITO/SCORE</th>
+					      					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      					      <td>9999 de 113 </td>
+					      					      					      <td>100 de 27 </td>
+					      					      					      <td>100 de 31 </td>
+					      					       					      <td>100 de 9 </td>
+ 					       					      					      <td>100 de 0 </td>
+					      					      					      <td>100 de 11 </td>
+					      					    </tr>
+					  </tbody>
+					</table>
+
+					<br/>
+					<span>Fatura(s):</span>
+							  <table class="table table-striped">
+							    <thead>
+							      <tr>
+							        <th>ID</th>
+							        <th>DATA</th>
+							        <th>PERIODO</th>
+							        <th>VALOR</th>
+							        <th>Forma de Pagamento</th>
+							        <th>TIPO</th>
+							        <th>Status</th>
+							        <th>Ação</th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							    										<tr style="font-size:11px;" align="center">
+								        <td>[5]</td>
+								        <td>
+											
+
+12/02/2018
+										</td>
+								        <td>30&nbsp;Dias</td>
+								        <td>R$:&nbsp;100.00</td>
+								        <td> 
+										Boleto bancario
+										</td>
+								        <td>
+								        									        	Contratacao
+								        											</td>
+								        <td>
+																						Pago
+																					</td>
+								        <td>
+								        										         - 
+									        								        </td>
+							      </tr>
+
+							    									</tbody>
+					</table>
+
+				</div>
+
+
+
+				<span style="float: left; font-size: 13px; font-weight: bold; display: block;">
+						Usuario: putty<br/>
+						Data contratacao: 09/01/2018<br/> Data vecimento: 15/12/2021<br/>
+						Valor Pago: R$: 150.00<br/>
+				</span>
+
+	        </div>	
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+				
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="EditrarCadastro" tabindex="-1" role="dialog" aria-labelledby="EditrarCadastro">
+	  <div class="modal-dialog" role="document" style="width: 45%; margin-top: 7%;">
+	    <div class="modal-content col-md-11">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Editar cadastro.</h4>
+	      </div>
+	      <div class="modal-body">
+	    	<form accept="" method="post">
+	    	<div class="row">
+			
+				<div style="">
+					<div class="form-group col-md-12">
+						<span>Usuario:</span>
+						<input type="text" class="form-control" id="usuario" name="usuario" value="putty" disabled="">
+					</div>
+
+					<div class="form-group col-md-12">
+						<span>Senha:</span>
+						<input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
+					</div>
+
+					<div class="form-group col-md-12">
+						<span>Digite sua nova senha:</span>
+						<input type="password" class="form-control" id="nova_senha" name="nova_senha" placeholder="Digite sua nova senha">
+					</div>
+
+					<div class="form-group col-md-12">
+						<span>Confirme sua nova senha:</span>
+						<input type="password" class="form-control" id="c_nova_senha" name="c_nova_senha" placeholder="Digite sua nova senha">
+					</div>
+				</div>
+	        </div>	
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	        <button id="btAtualizarSenha" type="button" class="btn btn-primary">Alterar senha</button>
+	      </div>
+	  	 </form>
+	    </div>
+	  </div>
+	</div>				
+
+	<!-- Modal -->
+	<div class="modal fade" id="Contato" tabindex="-1" role="dialog" aria-labelledby="Contato">
+	  <div class="modal-dialog" role="document" style="width: 45%; margin-top: 9%;">
+	    <div class="modal-content col-md-11">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Fale conosco.</h4>
+	      </div>
+	      <div class="modal-body">
+	    	<div class="row">
+
+				<div class="form-group col-md-12">
+					<span>Assunto:</span>
+					<select class="form-control" name="assunto" id="assunto">
+						<option value="1">Financeiro</option>
+						<option value="2">Suporte - Duvidas</option>
+						<option value="3">Sugestoes - Reclamacoes</option>
+						<option value="4">Outros</option>
+					</select>
+
+				</div>
+
+				<div class="form-group col-md-12">
+					<span>Digite sua mensagem:</span>
+					<textarea class="form-control" rows="4" name="mensagem" id="mensagem" cols="10"></textarea>
+					<center><br/><span>Sua mensagem sera lida e respondia em breve.</span></center>
+				</div>
+	        </div>	
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	        <button id="bntContato" type="button" class="btn btn-primary">Enviar mensagem</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+			<div class="main-content">
+				<div id="page-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 col-md-offset-4">
+								<img src="images/logo-up.png" alt="Up Busca" class="center-block img-responsive" id="logo">
+							</div>
+						</div>
+						<div class="container">
+							<form action="" onclick="javascript::void(0)" id="consultardados" method="POST">
+							<div class="col-md-12"> 
+						    	<div class="card">
+						        	<ul class="nav nav-tabs" role="tablist">
+						        								        		<li role="presentation" class="active">
+						        			<a href="#documento" aria-controls="documento" role="tab" data-toggle="tab" class="bntmenu">
+						        				<i class="fa fa-file-text"></i> 
+						        				<span>CPF/CNPJ</span> 
+						        			</a>
+						        	 	</li>
+						        	 							        	 											<li role="presentation">
+											<a href="#nome" aria-controls="nome" role="tab" data-toggle="tab" class="bntmenu">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<span>Nome</span>
+											</a>
+										</li>
+																														<li role="presentation">
+												<a href="#telefone" aria-controls="telefone" role="tab" data-toggle="tab" class="bntmenu">
+													<i class="fa fa-phone"></i>
+													<span>Telefone</span>
+												</a>
+										</li>
+																														<li role="presentation">
+											<a href="#endereco" aria-controls="endereceo" role="tab" data-toggle="tab" class="bntmenu">
+												<i class="fa fa-map-marker" aria-hidden="true"></i>
+												<span>Endereço</span>
+											</a>
+										</li>
+																    		</ul>
+						        						    	<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="documento">
+										<div id="custom-search-input">
+				                    		<div class="input-group col-md-12">
+				                        	<input type="text" class="search-query form-control" placeholder="CPF/CNPJ" name="doc" id="doc" onkeypress='mascaraMutuario(this,cpfCnpj)' onblur='clearTimeout()' maxlength="18" />
+				                            <span class="input-group-btn">
+				                            	<button class="btn btn-primary pesquisar" type="button" id="pes_doc">
+				                                	<span class=" glyphicon glyphicon-search"></span>
+				                                </button>
+				                            </span>
+				                        </div>
+				                    </div>
+	                        	</div>
+	                        								    							    <div role="tabpanel" class="tab-pane" id="nome">
+									<div class="form-row">
+										<br/>
+								    	<div class="form-group col-md-7" style="float: unset;">
+								  			<input type="text" class="form-control" name="n_nome" id="n_nome" placeholder="Nome/Razão Social">
+								    	</div>
+										<div class="form-group col-md-2">
+									    	<input type="text" class="form-control" name="n_cep" id="n_cep" placeholder="CEP">
+									    </div>								    	
+									    <div class="form-group col-md-3" style="width: 31.7%">
+									       <input type="text" class="form-control" name="n_cidade" id="n_cidade" placeholder="Cidade">
+									    </div>
+								    	<div class="form-group col-md-2" style="max-width: 13%;">
+								     		<input type="text" class="form-control" name="n_uf" id="n_uf" placeholder="UF">
+								    	</div>
+										<div class="form-group col-md-2" style="margin-top: 1px;">
+								 			<button type="button" class="btn btn-primary bntalt pesquisar" id="pes_nome">Pesquisar</button>
+										</div>
+									</div>
+								</div>
+								
+														    	<div role="tabpanel" class="tab-pane" id="endereco">
+					         		<div class="form-row">
+					         			<br/>
+										<div class="form-group col-md-7">
+											<input type="text" class="form-control" id="end_logradouro" name="end_logradouro" placeholder="Logradouro">
+										</div>
+										<div class="form-group col-md-2">
+									    	<input type="text" class="form-control" id="end_numero" name="end_numero" placeholder="Numero">
+									    </div>
+									</div>
+									<div class="form-row">
+									    <div class="form-group col-md-3">
+									    	<input type="text" class="form-control" id="end_cep" name="end_cep" placeholder="CEP">
+									    </div>									    
+								    	<div class="form-group col-md-4">
+								    		<input type="text" class="form-control" id="end_cidade" name="end_cidade" placeholder="Cidade">   
+								    	</div>
+										<div class="form-group col-md-2">
+								      		<input type="text" class="form-control" id="end_uf" name="end_uf" placeholder="UF">
+								    	</div>
+										<div class="form-group col-md-3" style="margin-top: 1px;">
+								 			<button type="button" class="btn btn-primary bntalt pesquisar" id="pes_end">Pesquisar</button>
+										</div>
+									</div>
+								</div>
+								
+														        <div role="tabpanel" class="tab-pane" id="telefone">
+									<div id="custom-search-input">
+				                		<div class="input-group col-md-12">
+				                        	<input type="text" class="search-query form-control" placeholder="(12) 3456-7890" name="n_tel" id="n_tel" />
+				                            <span class="input-group-btn">
+				                        		<button class="btn btn-primary pesquisar" type="button" id="pes_fone">
+				                                	<span class=" glyphicon glyphicon-search"></span>
+				                               	</button>
+				                            </span>
+				                        </div>
+				                	</div>
+								</div>
+															</div>
+						</form>
+					</div>
+
+					</div>
+				</div>
+				<div class="load"></div>
+				<div class="container" style="margin-bottom: 8%;">
+					<form style="margin-top:0; padding-top:0">
+						<div class="col-md-12">
+							<div class="tab-content" style="display: none" id="PesquisaResult">
+								<div role="tabpanel" class="tab-pane active" id="home">
+									<div class="table-responsive">
+										<table id="result" class="table table-bordred table-striped">
+											<thead>
+												<tr>
+													<th>CPF/CNPJ</th>
+													<th>Nome / Razão Social</th>
+													<th>Idade</th>
+													<th>Cidade</th>
+													<th>UF</th>
+												</tr>
+											</thead>
+											<tbody>	
+											</tbody>
+										</table>
+										
+									</div>
+									
+									<div class="pagnatin">
+										<div class="clearfix"></div>
+											
+											<ul class="pagination pull-right" id="paginacao">
+											</ul>
+										</div>							
+									</div>
+									<input type="hidden" value="" name="paginas" id="paginas"/>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>	
+	<footer>
+		<p><font color="#d41c1c">UP</font><font color="#838383">BUSCA</font> - Prospecção de novos clientes.</p>
+	</footer>
+    <script src="./js/jquery-1.10.2.min.js"></script> 
+    <script src="./js/bootstrap.min.js"></script>
+	        <script src="./js/wow.min.js"></script>
+        <script src="./js/jquery.maskedinput.js"></script>    
+        <script src="./js/mainn.js?nocache"></script>
+        <script src="./js/mainint.js?nocache"></script>
+        <script src="./js/jm.spinner.js"></script>
+            
+    
+
+</body>
+</html>
