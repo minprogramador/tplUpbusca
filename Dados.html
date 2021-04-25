@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UpBusca - Prospeccao de novos clientes.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="UPBUSCA, PROSPECCAO DE CLIENTES, NOVOS CLIENTES"/>
+    <link href="./css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="./css/bootstrap-theme.css" rel='stylesheet' type='text/css' />
+    <link href="./css/font-awesome.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/icon-font.min.css" type='text/css' />
+    <link href="./css/style.css" rel='stylesheet' type='text/css' />
+	    <link href="./css/jm.spinner.css" rel='stylesheet' type='text/css' />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    </head>
+        <body class="sticky-header left-side-collapsed"  onload="initMap()">
+    	
+    
+	<section>
+					
+	<div class="left-side sticky-left-side">
+			<div class="left-side-inner">
+				<ul class="nav nav-pills nav-stacked custom-nav">
+					<li class="active">
+						<a href="./Painel">
+							<i class="fa fa-home fa-2x" aria-hidden="true"></i>
+							<span>Painel</span>
+						</a>
+					</li>
+					<li class="menu-list">
+						<a href="#" data-toggle="modal" data-target="#Cadastro">
+							<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+							<span>Cadastro</span>
+						</a>
+					</li>
+
+					<li class="menu-list">
+						<a href="#" data-toggle="modal" data-target="#EditrarCadastro">
+							<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+							<span>Editar cadastro</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" data-toggle="modal" data-target="#Contato">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<span>Fale Conoscos</span>
+						</a>
+					</li>
+					<li>
+						<a href="./Sair">
+							<i class="fa fa-sign-in" aria-hidden="true"></i>
+							<span>Sair</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>					<div class="modal fade" id="Cadastro" role="dialog" aria-labelledby="Cadastro">
+	  <div class="modal-dialog" role="document" style="width: 45%; margin-top: 12%;">
+	    <div class="modal-content ">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Dados da conta.</h4>
+	      </div>
+	      <div class="modal-body">
+	    	<div class="row">
+	
+				<div class="form-group col-md-12">
+					<span>Limite/Consumo:</span>
+
+					<table class="table table-striped">
+					  <thead>
+					    <tr>
+						  					      <th>CPF</th>
+					      					      					      <th>CNPJ</th>
+					      					      					      <th>PAI</th>
+					      					       					      <th>RG</th>
+ 					       					      					      <th>CNH</th>
+					      					      					      <th>CREDITO/SCORE</th>
+					      					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      					      <td>9999 de 113 </td>
+					      					      					      <td>100 de 27 </td>
+					      					      					      <td>100 de 31 </td>
+					      					       					      <td>100 de 9 </td>
+ 					       					      					      <td>100 de 0 </td>
+					      					      					      <td>100 de 11 </td>
+					      					    </tr>
+					  </tbody>
+					</table>
+
+					<br/>
+					<span>Fatura(s):</span>
+							  <table class="table table-striped">
+							    <thead>
+							      <tr>
+							        <th>ID</th>
+							        <th>DATA</th>
+							        <th>PERIODO</th>
+							        <th>VALOR</th>
+							        <th>Forma de Pagamento</th>
+							        <th>TIPO</th>
+							        <th>Status</th>
+							        <th>Ação</th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							    										<tr style="font-size:11px;" align="center">
+								        <td>[5]</td>
+								        <td>
+											
+
+12/02/2018
+										</td>
+								        <td>30&nbsp;Dias</td>
+								        <td>R$:&nbsp;100.00</td>
+								        <td> 
+										Boleto bancario
+										</td>
+								        <td>
+								        									        	Contratacao
+								        											</td>
+								        <td>
+																						Pago
+																					</td>
+								        <td>
+								        										         - 
+									        								        </td>
+							      </tr>
+
+							    									</tbody>
+					</table>
+
+				</div>
+
+
+
+				<span style="float: left; font-size: 13px; font-weight: bold; display: block;">
+						Usuario: putty<br/>
+						Data contratacao: 09/01/2018<br/> Data vecimento: 15/12/2021<br/>
+						Valor Pago: R$: 150.00<br/>
+				</span>
+
+	        </div>	
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+				
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="EditrarCadastro" tabindex="-1" role="dialog" aria-labelledby="EditrarCadastro">
+	  <div class="modal-dialog" role="document" style="width: 45%; margin-top: 7%;">
+	    <div class="modal-content col-md-11">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Editar cadastro.</h4>
+	      </div>
+	      <div class="modal-body">
+	    	<form accept="" method="post">
+	    	<div class="row">
+			
+				<div style="">
+					<div class="form-group col-md-12">
+						<span>Usuario:</span>
+						<input type="text" class="form-control" id="usuario" name="usuario" value="putty" disabled="">
+					</div>
+
+					<div class="form-group col-md-12">
+						<span>Senha:</span>
+						<input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
+					</div>
+
+					<div class="form-group col-md-12">
+						<span>Digite sua nova senha:</span>
+						<input type="password" class="form-control" id="nova_senha" name="nova_senha" placeholder="Digite sua nova senha">
+					</div>
+
+					<div class="form-group col-md-12">
+						<span>Confirme sua nova senha:</span>
+						<input type="password" class="form-control" id="c_nova_senha" name="c_nova_senha" placeholder="Digite sua nova senha">
+					</div>
+				</div>
+	        </div>	
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	        <button id="btAtualizarSenha" type="button" class="btn btn-primary">Alterar senha</button>
+	      </div>
+	  	 </form>
+	    </div>
+	  </div>
+	</div>				
+
+	<!-- Modal -->
+	<div class="modal fade" id="Contato" tabindex="-1" role="dialog" aria-labelledby="Contato">
+	  <div class="modal-dialog" role="document" style="width: 45%; margin-top: 9%;">
+	    <div class="modal-content col-md-11">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Fale conosco.</h4>
+	      </div>
+	      <div class="modal-body">
+	    	<div class="row">
+
+				<div class="form-group col-md-12">
+					<span>Assunto:</span>
+					<select class="form-control" name="assunto" id="assunto">
+						<option value="1">Financeiro</option>
+						<option value="2">Suporte - Duvidas</option>
+						<option value="3">Sugestoes - Reclamacoes</option>
+						<option value="4">Outros</option>
+					</select>
+
+				</div>
+
+				<div class="form-group col-md-12">
+					<span>Digite sua mensagem:</span>
+					<textarea class="form-control" rows="4" name="mensagem" id="mensagem" cols="10"></textarea>
+					<center><br/><span>Sua mensagem sera lida e respondia em breve.</span></center>
+				</div>
+	        </div>	
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	        <button id="bntContato" type="button" class="btn btn-primary">Enviar mensagem</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+			<div class="main-content">
+			<div class="main-content">
+			<div id="page-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-md-offset-4">
+							<img src="./images/logo-up.png" alt="Up Busca" class="center-block img-responsive" id="logo" style="margin-top: -10%;">
+						</div><!--/logo-->
+					</div>
+				</div>
+			<div>
+
+	  		<div class="row">
+	  			<div class="col-md-10 col-md-offset-1">
+					<ul class="nav nav-tabs" role="tablist" style="margin-top: 0px;">
+						<li role="presentation" class="active">
+							<a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">Dados cadastrais</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="home">
+							<div class="table-responsive" style="margin-top: 12px;">
+								<table id="resultCadastro" class="table">
+									<tbody>
+										<tr>
+											<td>
+												<strong style="margin-right: 11px;">CPF:</strong> 
+												{$dados.doc}
+												<input type="hidden" name="doc" id="doc" value="{$dados.doc}"/>
+											</td>
+											<td>
+												<!--
+												<strong style="margin-right: 3px;">Situação do CPF:</strong> 
+												<button type="button" class="btn btn-mini btn-primary" style=" font-size: 10px; padding-top: 2px; padding-bottom: 2px; margin-bottom: 1px; margin-top: 0;">Verificar</button>
+												-->
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<strong style="margin-right: 2px;">Nome:</strong> 
+												{$dados.nome}
+											</td>
+											<td>
+												<strong>Sexo:</strong> 
+												{$dados.sexo}
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<strong>Data de nascimento:</strong> 
+												{$dados.nascimento}
+											</td>
+											<td>
+												<strong>Idade:</strong> 
+												{$dados.idade}
+												<span style="margin-left: 15px; margin-right: 15px;">  </span>
+												<strong>Signo:</strong> 
+												{$dados.signo}
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<strong>Nome da Mae:</strong>
+												{$dados.mae}
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="display: block">
+	  			<div class="col-md-10 col-md-offset-1">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">Dados extras</a>
+						</li>
+					</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+	    				<div class="table-responsive">
+							<table id="mytable" class="table table-bordred table-striped">
+								<tbody>
+									{if $Limites.status_pai == 1}
+									<tr>
+										<td>
+											<strong style="margin-right: 26px;">Nome do Pai:</strong>
+											<span id="resultpPlus"><button id="bntpai" type="button" class="btn btn-mini btn-primary" style=" font-size: 10px; padding-top: 2px; padding-bottom: 2px; margin-bottom: 1px;">Visualizar</button></span>
+										</td>
+									</tr>
+									{/if}
+									{if $Limites.status_rg == 1}
+ 									<tr>
+										<td>
+											<strong style="margin-right: 33px;">Numero RG:</strong>
+							    			<span id="resultrPlus"><button id="bntrg" type="button" class="btn btn-mini btn-primary" style=" font-size: 10px; padding-top: 2px; padding-bottom: 2px; margin-bottom: 1px;">Localizar</button></span>
+										</td>
+						  			</tr>
+						  			{/if}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{if is_array($telefones) && count($telefones) > 0}
+		<div class="row">
+	  		<div class="col-md-10 col-md-offset-1">
+	  			<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">Telefone(s)</a></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+						<div class="table-responsive">
+							<table id="mytable" class="table table-bordred table-striped">
+		            			<thead>
+		                    		<th>Numero</th>
+		            			</thead>
+					    		<tbody>
+					    			{section name=i loop=$telefones}
+					    				{if strlen($telefones[i].ddd) < 2}
+					    					<tr>
+					    						<td colspan="1">
+					    							Nada encontrado
+							    					<button type="button" class="btn btn-mini btn-primary" style="font-size: 10px; padding-top: 2px; padding-bottom: 2px; margin-bottom: 1px; margin-left: 5%;">Pesquisar outros telefones</button>
+					    						<td>
+					    					</tr>
+					    				{else}
+					    					<tr>
+												<td>
+													({$telefones[i].ddd})
+														{if isset($telefones[i].numero)}{$telefones[i].numero}
+													{else}
+														{$telefones[i].telefone}
+													{/if}
+												</td>
+											</tr>
+
+					    				{/if}
+					    			{/section}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{/if}
+		{if is_array($emails) && count($emails) > 0}
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">E-mail(s)</a>
+					</li>
+				</ul>
+				
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+						<div class="table-responsive" style="padding-top: 15px;">
+							<table id="mytable" class="table table-bordred table-striped">
+				    			<tbody>
+					    			{section name=i loop=$emails}
+					    				{if strlen($emails[i].email) > 2}
+					    					<tr>
+												<td>
+													{$emails[i].email}
+												</td>
+											</tr>
+
+					    				{/if}
+					    			{/section}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{/if}
+		
+		{if is_array($enderecos) && count($enderecos) > 0}
+		<div class="row">
+	  		<div class="col-md-10 col-md-offset-1">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">Endereco(s)</a></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+		    			<div class="table-responsive">
+							<table id="mytable" class="table table-bordred table-striped">
+		                		<thead>
+		            				<th>Logradouro</th>
+		                			<th>Numero</th>
+		                			<th>Complemento</th>
+		                			<th>Bairro</th>
+		                			<th>CEP</th>
+		                			<th>Cidade</th>
+		                    		<th>UF</th>
+		                		</thead>
+					    		<tbody>
+					    			{if isset($enderecos.logradouro)}
+									    	<tr>
+												<td>
+													{$enderecos.logradouro}
+												</td>
+												<td>
+													{$enderecos.numero}
+												</td>
+
+												<td>
+													{$enderecos.complemento}
+												</td>
+
+												<td>
+													{$enderecos.bairro}
+												</td>
+
+												<td>
+													{$enderecos.cep}
+												</td>
+
+												<td>
+													{$enderecos.cidade}
+												</td>
+												<td>
+													{$enderecos.uf}
+												</td>
+											</tr>
+									{else}
+					    			{section name=i loop=$enderecos}
+											{if strlen($enderecos[i].logradouro) > 5}
+									    	<tr>
+												<td>
+													{$enderecos[i].logradouro}
+												</td>
+												<td>
+													{$enderecos[i].numero}
+												</td>
+
+												<td>
+													{$enderecos[i].complemento}
+												</td>
+
+												<td>
+													{$enderecos[i].bairro}
+												</td>
+
+												<td>
+													{$enderecos[i].cep}
+												</td>
+
+												<td>
+													{$enderecos[i].cidade}
+												</td>
+												<td>
+													{$enderecos[i].uf}
+												</td>
+											</tr>
+					    				{/if}
+					    			{/section}
+
+					    			{/if}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{/if}
+		{if is_array($partempres) && count($partempres) > 0}
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+			  <ul class="nav nav-tabs" role="tablist">
+				  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">Participacao empresa(s)</a></li>
+			  </ul>
+			  <div class="tab-content">
+				  <div role="tabpanel" class="tab-pane active" id="home">
+					  <div class="table-responsive">
+						  <table id="mytable" class="table table-bordred table-striped">
+							  <thead>
+								  <th>CPF</th>
+								  <th>Nome</th>
+							  </thead>
+							  <tbody>
+							  	{section name=i loop=$partempres}
+							  	<td>
+							  		<a href="{$PATCH}/Dados/{$partempres[i].id}">{$partempres[i].doc}</a>
+							 	</td>
+							 	<td>
+							 		{if isset($partempres[i].empresa)}
+							  		{$partempres[i].empresa}
+							  		{else}
+							  		{$partempres[i].nome}
+							  		{/if}
+							  	</td>
+							  	{/section}
+							  </tbody>
+						  </table>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  {/if}
+
+	  {if is_array($empregos) && count($empregos) > 0}
+	  <div class="row">
+		  <div class="col-md-10 col-md-offset-1">
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">Emprego(s)</a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home">
+					<div class="table-responsive">
+						<table id="mytable" class="table table-bordred table-striped">
+							<thead>
+								<th>CNPJ</th>
+								<th>Empresa</th>
+								<th>Data admissao</th>
+							</thead>
+							<tbody>
+								{section name=i loop=$empregos}
+									<tr>
+										<td>
+											<a href="{$PATCH}/Dados/{$empregos[i].id}">{$empregos[i].doc}</a>
+										</td>
+										<td>
+											{$empregos[i].empresa}
+										</td>
+										<td>
+											{$empregos[i].data_admissao}
+										</td>	
+									</tr>
+								{/section}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{/if}
+	{if is_array($parentes) && count($parentes) > 0}
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+			  <ul class="nav nav-tabs" role="tablist">
+				  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">Parente(s)</a></li>
+			  </ul>
+			  <div class="tab-content">
+				  <div role="tabpanel" class="tab-pane active" id="home">
+					  <div class="table-responsive">
+						  <table id="mytable" class="table table-bordred table-striped">
+							  <thead>
+								  <th>CPF</th>
+								  <th>Nome</th>
+							  </thead>
+							  <tbody>
+							  	{section name=i loop=$parentes}
+									<tr>
+										<td>
+											<a href="{$PATCH}/Dados/{$parentes[i].id}">{$parentes[i].doc}</a>
+										</td>
+										<td>
+											{$parentes[i].nome}
+										</td>
+									</tr>
+							  	{/section}
+							  </tbody>
+						  </table>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  {/if}
+
+	  {if is_array($vizinhos) && count($vizinhos) > 0}
+	  <div class="row">
+		<div class="col-md-10 col-md-offset-1">
+		  <ul class="nav nav-tabs" role="tablist">
+			  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="tab-result">Vizinho(s)</a></li>
+		  </ul>
+		  <div class="tab-content">
+			  <div role="tabpanel" class="tab-pane active" id="home">
+				  <div class="table-responsive">
+					  <table id="mytable" class="table table-bordred table-striped">
+						  <thead>
+							  <th>CPF</th>
+							  <th>Nome</th>
+							</thead>
+						  <tbody>
+						  	{section name=i loop=$vizinhos}
+								<tr>
+									<td>
+										<a href="{$PATCH}/Dados/{$vizinhos[i].id}">{$vizinhos[i].doc}</a>
+									</td>
+									<td>
+										{$vizinhos[i].nome}
+									</td>
+
+								</tr>	  	
+						  	{/section}
+						  </tbody>
+					  </table>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	{/if}
+
+  </div>
+
+		<center>
+			<br/>
+			<button class="btn btn-primary" type="button" name="nova_consulta" id="nova_consulta">Nova consulta</button>
+			<br/><br/><br/><br/>
+		</center>
+	</section>
+	
+			</div>
+		</div>
+	</section>	
+	<footer>
+		<p><font color="#d41c1c">UP</font><font color="#838383">BUSCA</font> - Prospecção de novos clientes.</p>
+	</footer>
+    <script src="./js/jquery-1.10.2.min.js"></script> 
+    <script src="./js/bootstrap.min.js"></script>
+	        <script src="./js/wow.min.js"></script>
+        <script src="./js/jquery.maskedinput.js"></script>    
+        <script src="./js/mainn.js?nocache"></script>
+        <script src="./js/mainint.js?nocache"></script>
+        <script src="./js/jm.spinner.js"></script>
+            
+    
+
+</body>
+</html>
